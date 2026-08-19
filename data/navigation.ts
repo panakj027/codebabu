@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
 
 export const footerServices: NavItem[] = [
   { label: "Web Development", href: "/services#web-development" },
+  { label: "Mobile Apps", href: "/services#mobile-app-development" },
   { label: "Software Development", href: "/services#custom-software" },
   { label: "UI/UX", href: "/services#ui-ux-design" },
   { label: "E-commerce", href: "/services#ecommerce-development" },

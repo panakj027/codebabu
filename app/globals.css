@@ -36,6 +36,16 @@ body {
   background: var(--color-ink);
   color: #e8eef8;
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {
@@ -176,6 +186,113 @@ body {
   animation: drift 18s linear infinite;
 }
 
+@keyframes ring-spin {
+  from {
+    transform: rotateX(66deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(66deg) rotateZ(360deg);
+  }
+}
+
+@keyframes ring-spin-rev {
+  from {
+    transform: rotateX(62deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(62deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes node-orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-r)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-r)) rotate(-360deg);
+  }
+}
+
+@keyframes node-orbit-rev {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-r)) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translateX(var(--orbit-r)) rotate(360deg);
+  }
+}
+
+@keyframes core-shine {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+.hero-scene {
+  perspective: 920px;
+}
+
+.hero-ring {
+  position: absolute;
+  inset: 11%;
+  border-radius: 50%;
+  border: 1px solid rgba(91, 138, 255, 0.28);
+  box-shadow: 0 0 40px rgba(91, 138, 255, 0.08);
+  transform: rotateX(66deg);
+  animation: ring-spin 22s linear infinite;
+}
+
+.hero-ring-outer {
+  inset: 2%;
+  border-color: rgba(139, 108, 255, 0.22);
+  animation: ring-spin-rev 34s linear infinite;
+}
+
+.hero-orbit-anchor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  animation: node-orbit 26s linear infinite;
+  animation-delay: calc(var(--i) * -6.5s);
+}
+
+.hero-orbit-anchor.inner {
+  --orbit-r: 4.1rem;
+}
+
+.hero-orbit-anchor.mid {
+  --orbit-r: 6rem;
+  animation-name: node-orbit-rev;
+  animation-duration: 32s;
+  animation-delay: calc(var(--i) * -8s);
+}
+
+.hero-orbit-anchor.outer {
+  --orbit-r: 7.75rem;
+  animation-duration: 40s;
+  animation-delay: calc(var(--i) * -10s);
+}
+
+@media (min-width: 640px) {
+  .hero-orbit-anchor.inner {
+    --orbit-r: 6.6rem;
+  }
+
+  .hero-orbit-anchor.mid {
+    --orbit-r: 9.5rem;
+  }
+
+  .hero-orbit-anchor.outer {
+    --orbit-r: 12.35rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -191,8 +308,15 @@ body {
   .animate-float-slow,
   .animate-glow,
   .animate-orbit,
-  .animate-grid-drift {
+  .animate-grid-drift,
+  .hero-ring,
+  .hero-ring-outer {
     animation: none;
+  }
+
+  .hero-orbit-anchor {
+    animation: none !important;
+    transform: rotate(var(--a)) translateX(var(--orbit-r)) rotate(calc(var(--a) * -1)) !important;
   }
 
   *,

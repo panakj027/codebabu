@@ -68,7 +68,7 @@ export function MissionVision() {
       <div className="mesh pointer-events-none absolute inset-0" />
       <Container className="relative grid gap-6 py-16 sm:py-20 lg:grid-cols-2">
         <Reveal>
-          <article className="h-full rounded-3xl border border-white/8 bg-navy-card/80 p-8">
+          <article className="h-full rounded-3xl border border-white/8 bg-navy-card/80 p-6 sm:p-8">
             <h2 className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               Our Mission
             </h2>
@@ -79,7 +79,7 @@ export function MissionVision() {
           </article>
         </Reveal>
         <Reveal delay={80}>
-          <article className="h-full rounded-3xl border border-white/8 bg-navy-card/80 p-8">
+          <article className="h-full rounded-3xl border border-white/8 bg-navy-card/80 p-6 sm:p-8">
             <h2 className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               Our Vision
             </h2>

@@ -47,11 +47,10 @@ export function WhyCodeBabu() {
           {features.map((feature, index) => (
             <Reveal key={feature.title} delay={index * 60}>
               <article className="h-full rounded-2xl border border-white/8 bg-navy-card/70 p-6 transition duration-300 hover:border-accent/35">
-                <feature.icon
-                  className="h-5 w-5 text-accent-soft"
-                  aria-hidden="true"
-                />
-                <h3 className="mt-4 font-display text-lg font-semibold tracking-tight text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/6 text-accent-soft">
+                  <feature.icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-semibold tracking-tight text-white">
                   {feature.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">

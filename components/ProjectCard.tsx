@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { cn } from "@/lib/cn";
 
@@ -69,11 +70,49 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.category}
         </p>
         <h3 className="mt-2 font-display text-lg font-semibold tracking-tight text-white">
-          {project.title}
+          {project.href ? (
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="transition hover:text-accent-soft"
+            >
+              {project.title}
+              <ArrowUpRight
+                className="ml-1 inline h-4 w-4 align-text-top opacity-70"
+                aria-hidden="true"
+              />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          ) : (
+            project.title
+          )}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           {project.description}
         </p>
+        <ul className="mt-4 flex flex-wrap gap-1.5">
+          {project.technologies.slice(0, 4).map((tech) => (
+            <li
+              key={tech}
+              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-muted"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
+        {project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-soft transition hover:text-white"
+          >
+            Visit site
+            <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        ) : null}
       </div>
     </article>
   );

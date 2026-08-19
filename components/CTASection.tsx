@@ -56,7 +56,7 @@ export function CTASection({
               {description}
             </p>
           ) : null}
-          <Button href={href} size="lg" className="mt-8">
+          <Button href={href} size="lg" className="mt-8 w-full sm:w-auto">
             {buttonLabel}
           </Button>
         </div>

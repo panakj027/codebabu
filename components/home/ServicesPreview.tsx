@@ -14,11 +14,13 @@ export function ServicesPreview() {
             tone="dark"
             eyebrow="Services"
             title="What We Do"
-            description="From websites and software to design, commerce, and AI — we build digital products around the problem you actually need solved."
+            description="From websites and mobile apps to design, commerce, and AI — we build digital products around the problem you actually need solved."
           />
         </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+          {services
+            .filter((service) => service.slug !== "wordpress-development")
+            .map((service, index) => (
             <Reveal key={service.slug} delay={index * 50}>
               <ServiceCard service={service} tone="light" />
             </Reveal>

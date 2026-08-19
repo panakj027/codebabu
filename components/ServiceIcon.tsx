@@ -4,6 +4,7 @@ import {
   LayoutTemplate,
   Palette,
   ShoppingBag,
+  Smartphone,
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
@@ -11,6 +12,7 @@ import type { ServiceIconName } from "@/data/services";
 
 const icons: Record<ServiceIconName, LucideIcon> = {
   globe: Globe,
+  smartphone: Smartphone,
   cpu: Cpu,
   palette: Palette,
   "shopping-bag": ShoppingBag,

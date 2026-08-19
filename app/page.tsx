@@ -1,15 +1,16 @@
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/home/Hero";
 import { Process } from "@/components/home/Process";
+import { SelectedWork } from "@/components/home/SelectedWork";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
-import { TechStack } from "@/components/home/TechStack";
+import { TeamSection } from "@/components/TeamSection";
 import { WhyCodeBabu } from "@/components/home/WhyCodeBabu";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "CodeBabu | Web Development & Digital Solutions",
   description:
-    "CodeBabu builds modern websites, web applications, e-commerce platforms, software solutions, and AI-powered digital experiences for growing businesses.",
+    "CodeBabu builds modern websites, mobile apps, web applications, e-commerce platforms, software solutions, and AI-powered digital experiences for growing businesses.",
   path: "/",
 });
 
@@ -17,8 +18,9 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <Hero />
-      <TechStack />
       <ServicesPreview />
+      <SelectedWork />
+      <TeamSection tone="light" anchorId="team-preview" showCta />
       <WhyCodeBabu />
       <Process />
       <CTASection

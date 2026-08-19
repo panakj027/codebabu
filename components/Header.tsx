@@ -38,8 +38,8 @@ export function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-[4.25rem] w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-6 lg:px-8">
-        <Logo />
+      <div className="mx-auto flex h-[4.25rem] w-full max-w-7xl items-center justify-between gap-3 pl-[max(1.25rem,env(safe-area-inset-left))] pr-[max(1.25rem,env(safe-area-inset-right))] sm:gap-4 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))] lg:pl-[max(2rem,env(safe-area-inset-left))] lg:pr-[max(2rem,env(safe-area-inset-right))]">
+        <Logo className="min-w-0 shrink" />
         <nav className="hidden md:block" aria-label="Primary">
           <ul className="flex items-center gap-1">
             {navItems.map((item) => {
@@ -74,7 +74,7 @@ export function Header() {
         </div>
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 text-white md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 text-white md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}

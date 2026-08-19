@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/site";
 export const metadata = createMetadata({
   title: "Services",
   description:
-    "CodeBabu offers web development, custom software, UI/UX design, e-commerce, WordPress, and AI solutions built around your business.",
+    "CodeBabu offers web development, mobile app development, custom software, UI/UX design, e-commerce, WordPress, and AI solutions built around your business.",
   path: "/services",
 });
 

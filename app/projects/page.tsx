@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/site";
 export const metadata = createMetadata({
   title: "Projects",
   description:
-    "Selected websites, software, e-commerce, WordPress, and AI projects from CodeBabu — digital experiences built for real business needs.",
+    "CodeBabu portfolio — SaaS platforms, AI tools, ecommerce storefronts, booking systems, and WordPress sites built for real businesses.",
   path: "/projects",
 });
 
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects"
         title="Our Work"
-        subtitle="Selected projects and digital experiences we've built."
+        subtitle="Selected platforms, storefronts, and digital products we've built — from AI SaaS and booking systems to multi-country ecommerce."
       />
       <section className="bg-navy">
         <Container className="py-14 sm:py-16 lg:py-20">

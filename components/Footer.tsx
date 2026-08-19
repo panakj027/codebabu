@@ -6,9 +6,11 @@ import { footerServices, navItems } from "@/data/navigation";
 import { siteConfig } from "@/lib/site";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-white/8 bg-navy">
-      <Container className="py-14 sm:py-16">
+      <Container className="pt-14 pb-[20px] sm:pt-16 sm:pb-[20px]">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Logo />
@@ -49,6 +51,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/about#team"
+                  className="text-sm text-muted transition hover:text-white"
+                >
+                  Team
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -69,11 +79,11 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-white/8 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted">
-            © 2026 CodeBabu. All rights reserved.
+            © {currentYear} CodeBabu. All rights reserved.
           </p>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="text-sm text-muted transition hover:text-white"
+            className="break-all text-sm text-muted transition hover:text-white sm:break-normal"
           >
             {siteConfig.email}
           </a>

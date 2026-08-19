@@ -1,15 +1,20 @@
-export type Technology = {
-  name: string;
-  mark: string;
-};
-
-export const technologies: Technology[] = [
-  { name: "React", mark: "Re" },
-  { name: "Next.js", mark: "N" },
-  { name: "Node.js", mark: "No" },
-  { name: "TypeScript", mark: "TS" },
-  { name: "WordPress", mark: "Wp" },
-  { name: "WooCommerce", mark: "Wc" },
-  { name: "AI", mark: "AI" },
-  { name: "PostgreSQL", mark: "Pg" },
-];
+export const heroOrbits = {
+  inner: [
+    { name: "React", mark: "Re" },
+    { name: "Next.js", mark: "Nx" },
+    { name: "TypeScript", mark: "TS" },
+    { name: "Node.js", mark: "No" },
+  ],
+  mid: [
+    { name: "Express", mark: "Ex" },
+    { name: "PostgreSQL", mark: "Pg" },
+    { name: "MongoDB", mark: "Mg" },
+    { name: "AWS", mark: "AWS" },
+  ],
+  outer: [
+    { name: "React Native", mark: "RN" },
+    { name: "OpenAI", mark: "AI" },
+    { name: "Tailwind", mark: "Tw" },
+    { name: "WordPress", mark: "Wp" },
+  ],
+} as const;

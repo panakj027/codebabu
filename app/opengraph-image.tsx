@@ -24,26 +24,49 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 16,
-            marginBottom: 36,
+            gap: 18,
+            marginBottom: 30,
           }}
         >
           <div
             style={{
               width: 56,
               height: 56,
-              borderRadius: 16,
+              borderRadius: 14,
               background: "linear-gradient(135deg, #5b8aff, #8b6cff)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: 700,
+              color: "#ffffff",
             }}
           >
-            {"</>"}
+            {"CB"}
           </div>
-          <div style={{ fontSize: 32, fontWeight: 700 }}>CodeBabu</div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 34,
+                fontWeight: 700,
+              }}
+            >
+              <span>Code </span>
+              <span style={{ fontWeight: 400 }}>Babu</span>
+            </div>
+            <div
+              style={{
+                marginTop: 4,
+                fontSize: 15,
+                letterSpacing: 3,
+                color: "#95a4be",
+                textTransform: "uppercase",
+              }}
+            >
+              Digital Experiences
+            </div>
+          </div>
         </div>
         <div
           style={{
@@ -56,7 +79,7 @@ export default function OpenGraphImage() {
           Building Digital Experiences That Move Businesses Forward.
         </div>
         <div style={{ marginTop: 28, fontSize: 24, color: "#93a0b8" }}>
-          Web · Software · UI/UX · E-commerce · WordPress · AI
+          Web · Mobile · Software · UI/UX · E-commerce · WordPress · AI
         </div>
       </div>
     ),

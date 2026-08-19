@@ -62,7 +62,7 @@ export function ServiceCTA() {
               Tell us about your idea and we&apos;ll help you find the right
               solution.
             </p>
-            <Button href="/contact" size="lg" className="mt-8">
+            <Button href="/contact" size="lg" className="mt-8 w-full sm:w-auto">
               Talk to Us
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>

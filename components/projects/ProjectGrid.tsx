@@ -21,7 +21,7 @@ export function ProjectGrid() {
   return (
     <div>
       <div
-        className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
+        className="-mx-5 flex gap-2 overflow-x-auto overscroll-x-contain px-5 pb-2 snap-x snap-mandatory scrollbar-none sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0"
         role="tablist"
         aria-label="Filter projects by category"
       >
@@ -35,7 +35,7 @@ export function ProjectGrid() {
               aria-selected={selected}
               onClick={() => setFilter(item.value)}
               className={cn(
-                "shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition",
+                "shrink-0 snap-start rounded-full border px-4 py-2.5 text-sm font-medium transition",
                 selected
                   ? "border-accent bg-accent/15 text-white"
                   : "border-white/10 bg-white/5 text-muted hover:border-white/20 hover:text-white",

@@ -4,6 +4,7 @@ import {
   LayoutTemplate,
   Palette,
   ShoppingBag,
+  Smartphone,
   Sparkles,
   ArrowRight,
   type LucideIcon,
@@ -14,6 +15,7 @@ import { cn } from "@/lib/cn";
 
 const icons: Record<ServiceIconName, LucideIcon> = {
   globe: Globe,
+  smartphone: Smartphone,
   cpu: Cpu,
   palette: Palette,
   "shopping-bag": ShoppingBag,

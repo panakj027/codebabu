@@ -224,7 +224,7 @@ export function ContactForm() {
 
 function inputClass(invalid: boolean) {
   return cn(
-    "w-full rounded-xl border bg-ink/50 px-3.5 py-2.5 text-sm text-white outline-none transition placeholder:text-muted/70",
+    "w-full rounded-xl border bg-ink/50 px-3.5 py-3 text-base text-white outline-none transition placeholder:text-muted/70",
     invalid
       ? "border-red-400/60 focus:border-red-300"
       : "border-white/10 focus:border-accent/60",

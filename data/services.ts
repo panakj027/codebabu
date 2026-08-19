@@ -1,5 +1,6 @@
 export type ServiceIconName =
   | "globe"
+  | "smartphone"
   | "cpu"
   | "palette"
   | "shopping-bag"
@@ -25,6 +26,16 @@ export const services: Service[] = [
       "We design and build modern, fast, responsive websites and web applications. From marketing sites to product platforms, the focus stays on performance, accessibility, and a codebase that is easy to extend.",
     technologies: ["React", "Next.js", "TypeScript", "Node.js"],
     icon: "globe",
+  },
+  {
+    slug: "mobile-app-development",
+    title: "Mobile App Development",
+    shortDescription:
+      "Native and cross-platform mobile apps built for iOS and Android with smooth performance and polished UX.",
+    description:
+      "We design and build mobile applications for iOS and Android — from customer-facing apps to internal tools. Using React Native and modern mobile practices, we ship apps that feel fast, intuitive, and ready for real users.",
+    technologies: ["React Native", "TypeScript", "iOS", "Android", "Firebase"],
+    icon: "smartphone",
   },
   {
     slug: "custom-software",

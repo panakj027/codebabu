@@ -38,7 +38,7 @@ export function MobileMenu({ open, onClose, pathname }: MobileMenuProps) {
       aria-hidden={!open}
       aria-labelledby={titleId}
     >
-      <div className="px-5 py-4 sm:px-6">
+      <div className="py-4 pl-[max(1.25rem,env(safe-area-inset-left))] pr-[max(1.25rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))]">
         <p id={titleId} className="sr-only">
           Site navigation
         </p>

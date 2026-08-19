@@ -39,7 +39,8 @@ export const metadata: Metadata = {
     "e-commerce",
     "WordPress",
     "AI solutions",
-    "Next.js",
+    "mobile app development",
+    "React Native",
     "CodeBabu",
   ],
   openGraph: {
@@ -65,6 +66,7 @@ export const viewport: Viewport = {
   themeColor: "#060910",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 const jsonLd = {

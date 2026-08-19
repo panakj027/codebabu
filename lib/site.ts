@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "CodeBabu",
   tagline: "Building Digital Experiences That Move Businesses Forward.",
   description:
-    "CodeBabu builds modern websites, web applications, e-commerce platforms, software solutions, and AI-powered digital experiences for growing businesses.",
+    "CodeBabu builds modern websites, mobile apps, web applications, e-commerce platforms, software solutions, and AI-powered digital experiences for growing businesses.",
   url: "https://codebabu.com",
   email: "hello@codebabu.com",
   social: {
