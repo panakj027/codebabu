@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/codebabu', // Replace with your exact GitHub repository name
+  basePath: '/codebabu',
+  assetPrefix: '/codebabu/',
   images: {
     unoptimized: true,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
